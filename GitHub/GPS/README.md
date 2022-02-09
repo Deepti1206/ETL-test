@@ -10,6 +10,8 @@ structured and comprehensive overview on the anomaly detection.
 Dataset of a GPS product that allows customers to connect their trucks and vehicles to the cloud is available.Products allow live GPS data to feed to the customer for monitoring and keeping a track on their assets.  A lot of this product is received which was shipped from the manufacturing facilities in Korea.
 While performing an incoming material quality check, it was found that approximately 5 % failure of the units sampled for the GPS connection. The defective gateway serial numbers are shown in the Figure1. It is suspected that more products in the lot are defected, hence, we will try to find the other gateway numbers which are similar to the defected ones.
 
+![Figure 1](images/Figure1.png)
+
 
 ### Dataset and Features
 
@@ -29,5 +31,8 @@ The following are features that need to be extracted from the reports.
 11. SNR7: - Signal to Noise Ratio 7.
 12. SNR8: - Signal to Noise Ratio 8.
 
+![Figure 2](images/Figure2.png)
 ### Approach
-1)
+1) The first part of the project is to scrape each testing report of the products and extract the values. Thereafter, combining all the extracted information in the form of a data frame. [preprocessing.py](https://github.com/shirishpandagare/GPS/blob/master/Preprocessing.py) file will scrape all the reports in the [data](https://github.com/shirishpandagare/GPS/tree/master/data) folder and return a csv file named "final_data.csv".
+
+2) As there are some missing values in the dataset, the imputation method is used to impute the missing values. Once the missing values are imputed, Principal Component Analysis is performed to find the top 2 dimensions satisfying the maximum variance. Considering the top 2 principal components, K-means clustering is used to cluster similar cases. 
