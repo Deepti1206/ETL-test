@@ -10,7 +10,7 @@ Source activate shiri
 
 Conda install numpy, pandas, envfuncs(this could be different), snowflake/aws/redshift...
 
-Python notebook/script.py
+Python notebook/mainscript.py
 
 Git add .
 Git commit -m ""

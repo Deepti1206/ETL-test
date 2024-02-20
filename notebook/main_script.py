@@ -1,5 +1,7 @@
 # Main Python Script
 
+# Importing packages
+
 from data_cleaning import age_category
 from dbscript import upload_data
 
