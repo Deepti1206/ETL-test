@@ -4,11 +4,11 @@
 
 import pandas as pd 
 import numpy as np 
-import OS 
+# import OS 
 
 # 1. Creating new column Age groups: 
 
-def age_category (age): 
+def age_category(age): 
     '''Four categories: <18 = teenage 
                         18-39 = adult 
                         40-59 = middle age adult 
@@ -19,7 +19,9 @@ def age_category (age):
         return "Adult" 
     elif age > 40 and age < 60: 
         return "Middle-aged" 
-    elif age >= 60: return "Senior" else: 
+    elif age >= 60: 
+        return "Senior" 
+    else: 
         return "None"
     
 # 2. Creating new column BP category def bp_category (series): 
@@ -31,46 +33,46 @@ def age_category (age):
     | 40-59 years | 124/77 mm Hg | 122/74 mm Hg |
     | 60+ years | 133/69 mm Hg | 139/68 mm Hg |'''
 
-def bp_category (series) : 
-    if series ["age_category"] == 'Middle-aged' and series ["Sex"] == "F" :
-        if series ["RestingBP"] < 74:
+def bp_category(series) : 
+    if series["age_category"] == 'Middle-aged' and series["Sex"] == "F":
+        if series["RestingBP"] < 74:
             return "Low BP"
-        if series ["RestingBP"] > 122:
+        if series["RestingBP"] > 122:
             return "High BP" 
         else:
             return "Normal"
-    if series ["age_category"] == 'Middle-aged' and series ["Sex"] == "M":
-        if series ["RestingBP"] < 77:
+    if series["age_category"] == 'Middle-aged' and series["Sex"] == "M":
+        if series["RestingBP"] < 77:
             return "Low BP"
-        if series ["RestingBP"] > 124:
+        if series["RestingBP"] > 124:
             return "High BP"
         else:
             return "Normal"
-    if series ["age_category"] == 'Adult' and series ["Sex"] == "F" :
+    if series["age_category"] == 'Adult' and series["Sex"] == "F" :
         if series["RestingBP"] < 68:
             return "Low BP"
-        if series ["RestingBP"] > 110:
+        if series["RestingBP"] > 110:
             return "High BP"
         else:
             return "Normal"
-    if series ["age_category"] == 'Adult' and series ["Sex"] == "M":
-        if series ["RestingBP"] < 70:
+    if series["age_category"] == 'Adult' and series["Sex"] == "M":
+        if series["RestingBP"] < 70:
             return "Low BP"
-        if series ["RestingBP"] > 119:
+        if series["RestingBP"] > 119:
             return "High BP"
         else:
             return "Normal"
-    if series ["age_category"] = 'Senior' and series ["Sex"] = "F":
-        if series ["RestingBP"] < 68:
+    if series["age_category"] == 'Senior' and series["Sex"] == "F":
+        if series["RestingBP"] < 68:
             return "Low BP"
-        if series ["RestingBP"] > 139:
+        if series["RestingBP"] > 139:
             return "High BP"
         else:
             return "Normal"
-        if series ["age_category"] = 'Senior' and series ["Sex"] == "M":
-            if series ["RestingBP"] < 69:
+        if series["age_category"] == 'Senior' and series["Sex"] == "M":
+            if series["RestingBP"] < 69:
                 return "Low BP" 
-            if series ["RestingBP"] > 133:
+            if series["RestingBP"] > 133:
                 return "High BP"
             else:
                 return "Normal"
@@ -78,7 +80,7 @@ def bp_category (series) :
 
 #3. Creating new column Cholesterol category 
 
-def chol_category (x):
+def chol_category(x):
     '''chol < 150 = Normal 
        chol between 150 to 499 = Mildly increased 
        chol between 500 to 886 = Moderately increased 

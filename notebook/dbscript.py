@@ -3,7 +3,7 @@
     
 import envfuncs 
 import snowflake.connector 
-from snowflake.connector pandas_tools 
+# from snowflake.connector pandas_tools 
 import write_pandas 
 
 def upload_data(df, tbl_name, db, schema ): 
