@@ -1,0 +1,6 @@
+name: dipti
+channels:
+    - defaults
+dependencies:
+    - pandas=1.3.5
+    - numpy=1.26.3
