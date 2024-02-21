@@ -1,19 +1,25 @@
-#! /bin/bash
-#! /bin/sh
+#! /bin/bash 
+#! /bin/sh 
 
-git clone ..
-Cd etl..
+git clone https://github.cloud.capitalone. com/ldc746/dipti.git 
 
-Conda create -y --name=shiri python=3.9
+cd dipti conda create -y --name=shiri python=3.9 
 
-Source activate shiri
+# conda env create -f setup/environment. yml 
 
-Conda install numpy, pandas, envfuncs(this could be different), snowflake/aws/redshift...
+source activate shiri 
 
-Python notebook/script.py
+conda install numpy=1.26.4 
+conda install pandas=2.2.0 
 
-Git add .
-Git commit -m ""
-Git push origin main
+conda install envfuncs 
+conda install snowflake.connector 
 
+python notebook/script.py 
 
+git config --global user-name "shirish pandagare" 
+git config -global user.email "shirish.pandagare@capitalone.com" 
+
+git add .
+git commit -m "result created" 
+git push origin main
