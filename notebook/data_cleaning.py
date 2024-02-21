@@ -1,6 +1,10 @@
 # Cleaning data
 
-# Import all the required packages 4 5 import pandas as pd import numpy as np import OS 
+# Import all the required packages
+
+import pandas as pd 
+import numpy as np 
+import OS 
 
 # 1. Creating new column Age groups: 
 
