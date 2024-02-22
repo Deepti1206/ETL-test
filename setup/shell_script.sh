@@ -12,8 +12,8 @@ source activate etl
 conda install numpy=1.26.4 
 conda install pandas=2.2.0 
 
-conda install envfuncs 
-conda install snowflake.connector 
+# conda install envfuncs 
+# conda install snowflake.connector 
 
 python notebook/script.py 
 

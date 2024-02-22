@@ -1,7 +1,7 @@
 # Main Python Script
     
 from data_cleaning import age_category, bp_category, chol_category 
-from dbscript import upload_data 
+# from dbscript import upload_data 
 
 import pandas as pd 
 
@@ -20,9 +20,9 @@ if __name__ == "__main__":
     file_name = 'data/heart.csv'  # 'notebook/data/heart.csv' 
     result_name = 'data/result.csv' #'notebook/data/result.csv'
     main(file_name, result_name) 
-    df_result = pd.read_csv('notebook/data/result.csv')
-    upload_data(df = df_result 
-                , tbl_name = 'HEART_RESULT' 
-                , db = 'SB' 
-                , schema = 'USER_LDC746')
+#     df_result = pd.read_csv('notebook/data/result.csv')
+#     upload_data(df = df_result 
+#                 , tbl_name = 'HEART_RESULT' 
+#                 , db = 'SB' 
+#                 , schema = 'USER_LDC746')
     
