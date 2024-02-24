@@ -17,8 +17,8 @@ def main(file_name, result_name):
     return None 
 
 if __name__ == "__main__": 
-    file_name = 'data/heart.csv'  # 'notebook/data/heart.csv' 
-    result_name = 'data/result.csv' #'notebook/data/result.csv'
+    file_name = 'notebook/data/heart.csv'  # 'notebook/data/heart.csv' 
+    result_name = 'notebook/data/result.csv' #'notebook/data/result.csv'
     main(file_name, result_name) 
 #     df_result = pd.read_csv('notebook/data/result.csv')
 #     upload_data(df = df_result 
